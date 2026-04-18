@@ -1,0 +1,18 @@
+# DARWIN dependency lockfile for Python 3.10
+# Install a CUDA-matched PyTorch build first if you need GPU inference.
+
+numpy==1.26.4
+openai==1.51.2
+requests==2.32.3
+tqdm==4.66.5
+
+torch==2.4.1
+transformers==4.45.2
+accelerate==0.34.2
+
+chromadb==0.5.5
+PyPDF2==3.0.1
+
+# Optional collectors
+praw==7.7.1
+tweepy==4.14.0
