@@ -27,11 +27,15 @@
 
 ---
 
-[Overview](#-overview) · [Key Features](#-key-features) · [Architecture](#-architecture) · [Quick Start](#-quick-start) · [Usage](#-usage) · [Evolution Mechanisms](#-four-evolution-mechanisms) · [Mutation Operators](#-15-mutation-operators) · [Citation](#-citation)
+[News](#-news) · [Overview](#-overview) · [Key Features](#-key-features) · [Architecture](#-architecture) · [Quick Start](#-quick-start) · [Usage](#-usage) · [Evolution Mechanisms](#-four-evolution-mechanisms) · [Mutation Operators](#-15-mutation-operators) · [Citation](#-citation)
 
 </div>
 
 ---
+
+## 📰 News
+
+- **April 2026:** DARWIN achieved **100% ASR** on **100 randomly sampled HarmBench questions** against the newly released **DeepSeek-V4-Pro**, with an average of **2.17 queries per question**. The result file is available at [`example-results/deepseek-v4-pro.jsonl`](example-results/deepseek-v4-pro.jsonl).
 
 ## 📖 Overview
 
