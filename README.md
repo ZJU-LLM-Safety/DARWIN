@@ -35,6 +35,7 @@
 
 ## 📰 News
 
+- **June 2026:** DARWIN achieved **75% ASR** on **100 randomly sampled HarmBench questions** against **GPT-5.5**, with an average of **14.99 queries per successful question**. The result file is available at [`example-results/gpt-5-5.jsonl`](example-results/gpt-5-5.jsonl).
 - **May 2026:** DARWIN achieved **53% ASR** on **100 randomly sampled HarmBench questions** against **Claude Sonnet 4.6**, with an average of **18.53 queries per question**. The result file is available at [`example-results/claude-sonnet-4-6.jsonl`](example-results/claude-sonnet-4-6.jsonl).
 - **April 2026:** DARWIN achieved **100% ASR** on **100 randomly sampled HarmBench questions** against the newly released **DeepSeek-V4-Pro**, with an average of **2.17 queries per question**. The result file is available at [`example-results/deepseek-v4-pro.jsonl`](example-results/deepseek-v4-pro.jsonl).
 
