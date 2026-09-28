@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/ZJU-LLM-Safety/DARWIN/main/schemas/attack/strategy.schema.json",
+  "type": "object",
+  "required": ["key", "name", "instruction"],
+  "properties": {
+    "key": {"type": "string", "minLength": 1},
+    "name": {"type": "string", "minLength": 1},
+    "instruction": {"type": "string", "minLength": 1},
+    "mode": {"enum": ["instruction", "template"], "default": "instruction"},
+    "tags": {"type": "array", "items": {"type": "string"}},
+    "source_hash": {"type": "string"},
+    "generation": {"type": "integer", "minimum": 0},
+    "parent_ids": {"type": "array", "items": {"type": "integer"}},
+    "metadata": {"type": "object"}
+  },
+  "additionalProperties": false
+}

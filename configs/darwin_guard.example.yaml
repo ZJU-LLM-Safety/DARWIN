@@ -1,0 +1,63 @@
+method: DARWIN-Guard
+runtime:
+  output_dir: null
+  seed: 42
+models:
+  guard:
+    identity: Qwen3Guard-Gen-8B
+    path: null
+  generator:
+    identity: Mistral-7B-Instruct-v0.2
+    provider: transformers
+    model: null
+    temperature: 0.7
+    max_tokens: 384
+    device: cuda:0
+    extra:
+      model_kwargs:
+        torch_dtype: bfloat16
+  filter:
+    identity: Gemma-4-31B-it
+    provider: transformers
+    model: null
+    temperature: 0.0
+    max_tokens: 192
+    device: cuda:0
+    api_key_env: DARWIN_FILTER_API_KEY
+    base_url_env: DARWIN_FILTER_BASE_URL
+    extra: {}
+data:
+  harmful_path: null
+  benign_path: null
+attack:
+  config_path: null
+  initial_database: null
+  genetic_candidates: 2
+  reflection_candidates: 1
+  max_evolution_batches: 100
+  round_pool_targets: null
+  external_material: null
+online:
+  rounds: 20
+  examples_per_round: 500
+  examples_unit: rows
+  max_attempts: 20
+  harmful_fraction: 0.1
+training:
+  scope: full
+  optimizer: AdamW
+  learning_rate: 0.000005
+  schedule: cosine
+  warmup_ratio: 0.03
+  epochs: 1
+  effective_batch_size: 32
+  supervision: safety_label_only
+  lambda_raw: 1.0
+  max_length: 2048
+  dtype: bfloat16
+  device: cuda:0
+  microbatch_pairs: 1
+  weight_decay: 0.0
+  gradient_checkpointing: true
+inference:
+  max_new_tokens: 128

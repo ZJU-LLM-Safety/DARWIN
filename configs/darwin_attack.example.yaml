@@ -1,0 +1,98 @@
+runtime:
+  database_path: ../data/darwin.sqlite3
+  random_seed: null
+
+models:
+  strategy_generator:
+    identity: Mistral-7B-Instruct-v0.2
+    provider: transformers
+    model: Mistral-7B-Instruct-v0.2
+    device: null
+    temperature: 0.7
+    max_tokens: null
+  reflection:
+    identity: Mistral-7B-Instruct-v0.2
+    provider: transformers
+    model: Mistral-7B-Instruct-v0.2
+    device: null
+    temperature: 0.7
+    max_tokens: null
+  sandbox_target:
+    identity: Qwen2.5-7B-Instruct
+    provider: transformers
+    model: Qwen2.5-7B-Instruct
+    device: null
+    temperature: 0.0
+    max_tokens: null
+  target:
+    identity: null
+    provider: openai_compatible
+    model: null
+    api_key_env: TARGET_API_KEY
+    base_url_env: TARGET_BASE_URL
+    temperature: 0.0
+    max_tokens: null
+  judge:
+    identity: GPT-4o
+    provider: openai_compatible
+    model: GPT-4o
+    api_key_env: JUDGE_API_KEY
+    base_url_env: JUDGE_BASE_URL
+    temperature: 0.0
+    max_tokens: null
+  intent_judge:
+    identity: GPT-4o
+    provider: openai_compatible
+    model: GPT-4o
+    api_key_env: JUDGE_API_KEY
+    base_url_env: JUDGE_BASE_URL
+    temperature: 0.0
+    max_tokens: null
+  alternative_judge:
+    identity: Gemini-3.1-Pro
+    provider: openai_compatible
+    model: Gemini-3.1-Pro
+    api_key_env: ALTERNATIVE_JUDGE_API_KEY
+    base_url_env: ALTERNATIVE_JUDGE_BASE_URL
+    temperature: 0.0
+    max_tokens: null
+
+embedding:
+  identity: BAAI/bge-small-en-v1.5
+  model: BAAI/bge-small-en-v1.5
+  device: null
+  similarity_threshold: 0.80
+  history_threshold: null
+
+pool:
+  target_size: 200
+  admission_threshold: 0.80
+  crossover_top_k: 5
+  crossover_probability: 0.50
+  mutation_probability: 0.50
+  mutation_operator_count: 15
+  mutation_operators_file: ../strategies/mutation_operators.jsonl
+
+selection:
+  alpha: 0.1
+  gamma: 0.5
+
+sandbox:
+  dataset_path: null
+  goals_per_candidate: null
+  trials_per_goal: null
+
+attack:
+  dataset_path: null
+  dataset_id: null
+  target_id: null
+  target_kind: llm
+  max_target_queries: 60
+  chains_per_instance: 20
+  max_chain_length: 3
+  success_score: 5
+  guardrail_template: null
+  guardrail_template_file: null
+  guardrail_template_id: null
+  guardrail_safe_pattern: null
+  guardrail_unsafe_pattern: null

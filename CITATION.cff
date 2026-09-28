@@ -1,0 +1,46 @@
+cff-version: 1.2.0
+message: "If you use DARWIN in your research, please cite the paper below."
+title: "DARWIN: Evolving Jailbreak Adversary and Guardrail for LLM Safety Evaluation and Protection"
+type: software
+authors:
+  - family-names: Qi
+    given-names: Weiwei
+  - family-names: Wu
+    given-names: Zefeng
+  - family-names: Guo
+    given-names: Zhilin
+  - family-names: Zheng
+    given-names: Tianhang
+  - family-names: Lu
+    given-names: Chaochao
+  - family-names: He
+    given-names: Liang
+  - family-names: Qin
+    given-names: Zhan
+  - family-names: Ren
+    given-names: Kui
+repository-code: "https://github.com/ZJU-LLM-Safety/DARWIN"
+url: "https://github.com/ZJU-LLM-Safety/DARWIN"
+preferred-citation:
+  type: article
+  title: "DARWIN: Evolving Jailbreak Adversary and Guardrail for LLM Safety Evaluation and Protection"
+  authors:
+    - family-names: Qi
+      given-names: Weiwei
+    - family-names: Wu
+      given-names: Zefeng
+    - family-names: Guo
+      given-names: Zhilin
+    - family-names: Zheng
+      given-names: Tianhang
+    - family-names: Lu
+      given-names: Chaochao
+    - family-names: He
+      given-names: Liang
+    - family-names: Qin
+      given-names: Zhan
+    - family-names: Ren
+      given-names: Kui
+  journal: "arXiv preprint arXiv:2607.19829"
+  year: 2026
+  url: "https://arxiv.org/abs/2607.19829"

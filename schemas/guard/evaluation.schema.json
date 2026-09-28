@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["benchmark", "text", "label"],
+  "properties": {
+    "id": {"type": "string"},
+    "benchmark": {"type": "string", "minLength": 1},
+    "benchmark_group": {"type": "string", "enum": ["harmful", "standard_benign", "over_refusal"]},
+    "text": {"type": "string", "minLength": 1},
+    "label": {"type": "integer", "enum": [0, 1]}
+  },
+  "additionalProperties": false
+}

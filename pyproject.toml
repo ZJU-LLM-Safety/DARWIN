@@ -1,0 +1,41 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "darwin"
+version = "0.1.0"
+description = "DARWIN: Evolving Jailbreak Adversary and Guardrail for LLM Safety Evaluation and Protection"
+readme = "README.md"
+authors = [
+  {name = "Weiwei Qi"},
+  {name = "Zefeng Wu"},
+  {name = "Zhilin Guo"},
+  {name = "Tianhang Zheng"},
+  {name = "Chaochao Lu"},
+  {name = "Liang He"},
+  {name = "Zhan Qin"},
+  {name = "Kui Ren"},
+]
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.26,<3", "PyYAML>=6,<7"]
+
+[project.urls]
+Repository = "https://github.com/ZJU-LLM-Safety/DARWIN"
+Paper = "https://arxiv.org/abs/2607.19829"
+"DARWIN-Guard" = "https://huggingface.co/ZJU-Safety/DARWIN-Guard"
+
+[project.optional-dependencies]
+api = ["openai>=1.40,<3"]
+local = ["torch>=2.4", "transformers[torch,vision]>=5.10.1,<6", "sentence-transformers>=3.0", "accelerate>=1.1.0"]
+training = ["torch>=2.4", "transformers[torch,vision]>=5.10.1,<6", "safetensors>=0.4.3"]
+
+[project.scripts]
+darwin-attack = "darwin_attack.cli:main"
+darwin-guard = "darwin_guard.cli:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
